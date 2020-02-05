@@ -11,3 +11,12 @@
 .nav h2 {
 	text-align: center;
 }
+.loader {
+	display: block;
+	text-align: center;
+}
+.error {
+	text-align: center;
+	justify-content: center;
+	color: red;
+}

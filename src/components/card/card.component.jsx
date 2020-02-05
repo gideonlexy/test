@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './card.styles.css';
 
-import axios from 'axios';
-
 class Card extends Component {
 	state = {
 		comments: [],
@@ -15,19 +13,9 @@ class Card extends Component {
 		]
 	};
 
-	componentDidMount() {
-		axios
-			.get('https://jsonplaceholder.typicode.com/comments?_limit=15')
-			.then(res => {
-				this.setState({ comments: res.data });
-			})
-			.catch(error => {
-				console.log(error);
-			});
-	}
-
 	render() {
-		const { comments, headings } = this.state;
+		const { headings } = this.state;
+		const { comments } = this.props;
 
 		return (
 			<div>
